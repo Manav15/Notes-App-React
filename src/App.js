@@ -8,17 +8,21 @@ import StateParent from './components/StateDemo/StateParent';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="display-4">Hello World</h1>
-      <hr />
-      <StateParent />
-      {/*<Parent />
-      <hr />
-      <ClassBasedCompDemo />
-      <hr/>
-      <FunctionBasedCompDemo />
-      */}
-    </div> 
+    <div>
+      <h1>Notes App</h1>
+    </div>
+    // <div className="App">
+    //   <h1 className="display-4">Hello World</h1>
+    //   <hr />
+    //   <StateParent />
+    //   {/*<Parent />
+    //   <hr />
+    //   <ClassBasedCompDemo />
+    //   <hr/>
+    //   <FunctionBasedCompDemo />
+    //   */}
+    // </div> 
+
   );
 }
 
