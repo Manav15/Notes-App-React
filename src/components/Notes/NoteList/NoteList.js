@@ -8,7 +8,7 @@ class NoteList extends Component {
             return <NoteItem note={note} />
         })
         return (
-            <div>
+            <div className="row">
                 {noteItems}
             </div>
         );

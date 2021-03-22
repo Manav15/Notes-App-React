@@ -1,0 +1,8 @@
+.margin-card{
+    margin-top: 12px;
+}
+
+.margin-card:hover{
+    background-color :darksalmon;
+    cursor: pointer;
+}
