@@ -4,14 +4,16 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import ClassBasedCompDemo from './components/Types/ClassBasedCompDemo';
 import FunctionBasedCompDemo from './components/Types/FunctionBasedCompDemo';
 import Parent from './components/CmpCommunication/Parent';
+import StateParent from './components/StateDemo/StateParent';
 
 function App() {
   return (
     <div className="App">
       <h1 className="display-4">Hello World</h1>
       <hr />
-      <Parent />
-      {/* <hr />
+      <StateParent />
+      {/*<Parent />
+      <hr />
       <ClassBasedCompDemo />
       <hr/>
       <FunctionBasedCompDemo />
