@@ -5,12 +5,16 @@ import ClassBasedCompDemo from './components/Types/ClassBasedCompDemo';
 import FunctionBasedCompDemo from './components/Types/FunctionBasedCompDemo';
 import Parent from './components/CmpCommunication/Parent';
 import StateParent from './components/StateDemo/StateParent';
+import Notes from './components/Notes/Notes';
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <h1>Notes App</h1>
+      <hr />
+      <Notes />
     </div>
+    
     // <div className="App">
     //   <h1 className="display-4">Hello World</h1>
     //   <hr />
