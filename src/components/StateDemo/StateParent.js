@@ -12,10 +12,20 @@ class StateParent extends Component {
         })
     } 
 
+    onDecrement = () => {
+        this.setState({
+            counter : this.state.counter - 1
+        })
+    }
+
+    onReset = () =>{
+        this.setState({counter : 0})
+    }
+
     render() {
         return (
             <div>
-                <StateChild counter = {this.state.counter} onIncrease = {this.onIncrement}/>
+                <StateChild counter = {this.state.counter} onIncrease = {this.onIncrement} onReset = {this.onReset} onDecrease= {this.onDecrement}/>
             </div>
         );
     }
