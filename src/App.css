@@ -1,7 +1,10 @@
 .App {
+  padding-top: 1em;
+  padding-bottom: 1em;
   text-align: center;
-  margin-left: 5em;
-  margin-right: 5em;
+  background-color: black;
+  color: floralwhite;
+  border-radius: 50%;
 }
 
 .App-logo {
@@ -26,6 +29,15 @@
   color: white;
 }
 
+.App-body{
+  background-color: black;
+  padding-bottom: 100%;
+  padding-top: 1em;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 5%;
+}
 .App-link {
   color: #61dafb;
 }

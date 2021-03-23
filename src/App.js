@@ -10,9 +10,11 @@ import Notes from './components/Notes/Notes';
 function App() {
   return (
     <div className="container">
-      <h1 className="display-4 text-center">Notes App</h1>
+      <h1 className="display-4 text-center App">Notes App</h1>
       <hr />
+      <div className="container App-body">
       <Notes />
+      </ div>
     </div>
     
     // <div className="App">
