@@ -16,6 +16,7 @@ class Notes extends Component {
         return (
             <div>
                 <NoteList notes = {this.state.notes} />
+                <hr />
                 <NoteForm />           
             </div>
         );
