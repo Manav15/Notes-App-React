@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EditNote from './EditNote/EditNote';
 import NoteForm from './NewNoteForm/NoteForm';
 import NoteList from './NoteList/NoteList';
 
@@ -24,8 +25,14 @@ class Notes extends Component {
             notes : [...this.state.notes,newNote]
         })
     }
+
+    getId = (id) => {
+        console.log("Selected Note Id - ",id);
+    }
+
     render() {
         let myForm=null;
+        let editNote=<EditNote note={this.state.notes[0]} />
         if(this.state.showForm)
         {
             myForm = <NoteForm addNewItem = {(title,body)=> this.onAddNewItem(title,body)}/>           
@@ -33,11 +40,13 @@ class Notes extends Component {
         return (
             <div>
                 <br />
-                <NoteList notes = {this.state.notes} />
+                <NoteList notes = {this.state.notes} 
+                    getId= {id => this.getId(id)}/>
                 <br />
                 <button className="btn btn-warning" onClick={() => this.setState({showForm : !this.state.showForm}) }>Show Form</button>
                 <hr />
                 {myForm}
+                {editNote}
             </div>
         );
     }
