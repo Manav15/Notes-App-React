@@ -11,6 +11,26 @@ class EditNote extends Component {
             body: event.target.value
         })
     }
+
+    deleteItem = (event) =>{
+        const body=this.state.body
+        event.preventDefault();
+        this.props.onDeleteItem(this.props.note.id,body);
+
+    }
+
+    updateItem = () =>{
+        this.props.onUpdateItem(this.props.note.id,this.state.body);
+    }
+
+    componentDidUpdate(prevProps,prevState){
+        if(prevProps.note.body !== this.props.note.body){
+            this.setState({
+                body :this.props.note.body
+            }
+            )
+        }
+    }
     render() {
         return (
             <div className="row">
@@ -29,13 +49,19 @@ class EditNote extends Component {
                                 <br />
                                 <div className="row">
                                     <div className="col-sm-4 col-md-4">
-                                        <button className="btn btn-success btn-block">Update</button>
+                                        <button 
+                                            className="btn btn-success btn-block"
+                                            onClick={this.updateItem}>Update</button>
                                     </div>
                                     <div className="col-sm-4 col-md-4">
-                                        <button className="btn btn-danger btn-block">Cancel</button>
+                                        <button 
+                                            className="btn btn-danger btn-block"
+                                            onClick={() => this.props.cancelItem()}>Cancel</button>
                                     </div>
                                     <div className="col-sm-4 col-md-4">
-                                        <button className="btn btn-secondary btn-block">Delete</button>
+                                        <button 
+                                            className="btn btn-secondary btn-block"
+                                            onClick={this.deleteItem}>Delete</button>
                                     </div>
                                 </div>
                             </form>
